@@ -4,6 +4,6 @@
 {% if state_list %}
 {% set output = {saltenv:{grains['id']:state_list}} %}
 {% else %}
-{% set output = {'base':{'*':['dyn_top_errors.no_states']}}
+{% set output = {'base':{'*':['dyn_top_errors.no_states']}}%}
 {% endif %}
 {{output|yaml}}
