@@ -4,7 +4,7 @@
 {% if state_list -%}
 {% set output = {saltenv:{grains['id']:state_list}} -%}
 {% elif 'run_first_run' in salt.cp.list_master() %}
-{% set output = {'base':{'*':['firtrun']}}-%}
+{% set output = {'base':{'*':['run_first_run']}}-%}
 {% else -%}
 {% set output = {'base':{'*':['dyn_top_errors.no_states']}}-%}
 {% endif -%}
